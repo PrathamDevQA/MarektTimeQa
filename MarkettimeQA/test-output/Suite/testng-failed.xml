@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test_All(failed)">
+    <classes>
+      <class name="salesperson.ForgotUsername">
+        <methods>
+          <include name="openURL"/>
+          <include name="tearsDown"/>
+          <include name="backToLogin"/>
+          <include name="beforeSuite"/>
+          <include name="setUP"/>
+        </methods>
+      </class> <!-- salesperson.ForgotUsername -->
+      <class name="salesperson.ForgotPassword">
+        <methods>
+          <include name="openURL"/>
+          <include name="tearsDown"/>
+          <include name="beforeSuite"/>
+          <include name="setUP"/>
+          <include name="backToLogin"/>
+        </methods>
+      </class> <!-- salesperson.ForgotPassword -->
+      <class name="salesperson.Registration">
+        <methods>
+          <include name="openURL"/>
+          <include name="tearsDown"/>
+          <include name="beforeSuite"/>
+          <include name="setUP"/>
+          <include name="SelectSellerOption"/>
+        </methods>
+      </class> <!-- salesperson.Registration -->
+    </classes>
+  </test> <!-- Test_All(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,64 @@
+package dateOfBirth;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SelectDateOfBirth {
+
+	public WebDriver driver;
+	public String browser = "Chrome";
+	
+	public void setUp() {
+		
+		if (browser.equals("Chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		}
+		else if(browser.equals("FF")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+		}
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+	}
+	
+	public void DropDown() throws InterruptedException {
+		
+		driver.findElement(By.xpath("//input[@name='First_Name']")).sendKeys("Manmit");
+		driver.findElement(By.xpath("//input[@name='Last_Name']")).sendKeys("Gamit");
+		WebElement bDay = driver.findElement(By.id("Birthday_Day"));
+		WebElement bMonth = driver.findElement(By.id("Birthday_Month"));
+		WebElement bYear = driver.findElement(By.id("Birthday_Year"));
+		
+		Select selectDay = new Select(bDay);
+		Select selectMonth = new Select(bMonth);
+		Select selectYear = new Select(bYear);
+		
+		selectDay.selectByIndex(22);
+		Thread.sleep(5000);
+		selectMonth.selectByValue("November");
+		Thread.sleep(5000);
+		selectYear.deselectByVisibleText("1992");
+		Thread.sleep(5000);
+		
+	}
+	
+	public void tearDown() {
+		driver.close();
+	}
+	public static void main(String[] args) {
+	
+		
+	}
+}

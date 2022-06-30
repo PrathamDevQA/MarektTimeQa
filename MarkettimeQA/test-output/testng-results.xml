@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-06-23T06:57:52 IST" name="Default suite" finished-at="2022-06-23T06:58:26 IST" duration-ms="34167">
+    <groups>
+    </groups>
+    <test started-at="2022-06-23T06:57:52 IST" name="Default test" finished-at="2022-06-23T06:58:26 IST" duration-ms="34167">
+      <class name="salesperson.Login">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:salesperson.Login@5c33f1a9]" started-at="2022-06-23T06:57:52 IST" name="beforeSuite" finished-at="2022-06-23T06:57:52 IST" duration-ms="150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:salesperson.Login@5c33f1a9]" started-at="2022-06-23T06:57:52 IST" name="setUP" finished-at="2022-06-23T06:57:57 IST" duration-ms="5313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method is-config="true" signature="openURL()[pri:0, instance:salesperson.Login@5c33f1a9]" started-at="2022-06-23T06:57:57 IST" name="openURL" finished-at="2022-06-23T06:58:20 IST" duration-ms="22356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openURL -->
+        <test-method signature="forgotPassword()[pri:3, instance:salesperson.Login@5c33f1a9]" started-at="2022-06-23T06:58:20 IST" name="forgotPassword" finished-at="2022-06-23T06:58:26 IST" duration-ms="6295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPassword -->
+        <test-method is-config="true" signature="tearsDown()[pri:0, instance:salesperson.Login@5c33f1a9]" started-at="2022-06-23T06:58:26 IST" name="tearsDown" finished-at="2022-06-23T06:58:26 IST" duration-ms="148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearsDown -->
+      </class> <!-- salesperson.Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
